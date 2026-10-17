@@ -1,4 +1,4 @@
 window.VENTURA_CONFIG = {
-  supabaseUrl: "https://ykoiksfjiglcskjxfkxr.supabase.co",
-  supabasePublishableKey: "sb_publishable__QP7WqaMp51nEjaQA7pW0w_hQgnfo1R"
+  supabaseUrl: "https://ykoiksfijglcskjxfxkr.supabase.co",
+  supabasePublishableKey: "COLE_AQUI_SUA_CHAVE_PUBLICAVEL_ATUAL"
 };
