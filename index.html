@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090807">
+  <title>Ventura | Em Gel</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="watermark">V</div>
+  <header>
+    <a class="brand" href="#inicio"><b>V</b><span>VENTURA<small>EM GEL</small></span></a>
+    <nav><a href="#servicos">Serviços</a><a href="#agendar">Agendar</a></nav>
+  </header>
+  <main>
+    <section id="inicio" class="screen hero">
+      <div class="logo"><div class="monogram">V</div><h1>VENTURA</h1><p>— EM GEL —</p></div>
+      <p class="eyebrow">Cuidado, beleza e confiança em cada detalhe</p>
+      <h2>Seu momento de se cuidar começa aqui.</h2>
+      <p>Será um prazer receber você. Escolha seus serviços e envie sua solicitação de agendamento.</p>
+      <button id="start" class="primary">Quero agendar</button>
+    </section>
+    <section id="boas" class="screen panel hidden">
+      <small class="eyebrow">BEM-VINDA</small><h2>Que bom ter você aqui! ✨</h2>
+      <p>Prepare-se para um momento especial de cuidado e autoestima.</p><button id="continue" class="primary">Continuar</button>
+    </section>
+    <section id="agendar" class="screen panel hidden">
+      <small class="eyebrow">ETAPA 1 DE 3</small><h2>Vamos nos conhecer?</h2>
+      <form id="clientForm">
+        <label>Nome completo<input name="name" required maxlength="100"></label>
+        <label>Telefone / WhatsApp<input name="phone" required maxlength="30"></label>
+        <label>Dia desejado<input name="date" type="date" required></label>
+        <label>Horário preferido<input name="time" type="time" required></label>
+        <button class="primary" type="submit">Escolher serviços</button>
+      </form>
+    </section>
+    <section id="servicos" class="screen panel hidden">
+      <small class="eyebrow">ETAPA 2 DE 3</small><h2>Escolha seus serviços</h2>
+      <p id="servicesNotice" class="muted" aria-live="polite"></p>
+      <div id="serviceList"></div>
+      <div class="total"><span>Total estimado</span><b id="total1">R$ 0,00</b></div>
+      <div class="actions"><button id="backClient" class="secondary">Voltar</button><button id="toPay" class="primary">Continuar para pagamento</button></div>
+    </section>
+    <section id="pagamento" class="screen panel hidden">
+      <small class="eyebrow">ETAPA 3 DE 3</small><h2>Pagamento e confirmação</h2>
+      <div class="total"><span>Valor total</span><b id="total2">R$ 0,00</b></div>
+      <p>Escolha a forma de pagamento antes de enviar a solicitação.</p>
+      <label class="option"><input type="radio" name="payment" value="Pix"> Pix</label>
+      <label class="option"><input type="radio" name="payment" value="Dinheiro"> Dinheiro</label>
+      <label class="option"><input type="radio" name="payment" value="Cartão"> Cartão (confirmar disponibilidade)</label>
+      <label class="terms"><input type="checkbox" id="agree"> Confirmo os dados e entendo que o horário depende da confirmação da loja.</label>
+      <div class="actions"><button id="backServices" class="secondary">Voltar</button><button id="submit" class="primary">Enviar solicitação</button></div>
+      <p id="status" class="muted" aria-live="polite"></p>
+    </section>
+    <section id="thanks" class="screen panel hidden">
+      <small class="eyebrow">OBRIGADA!</small><h2>Obrigada por escolher a Ventura!</h2>
+      <p>A loja entrará em contato para verificar a disponibilidade e confirmar seu atendimento.</p>
+      <a id="wa" class="primary link" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
+      <button id="again" class="secondary">Nova solicitação</button>
+    </section>
+    <section class="gallery">
+      <small class="eyebrow">INSPIRAÇÕES</small><h2>Exemplos de trabalhos</h2>
+      <p class="muted">Substitua estes espaços pelas fotos reais das suas unhas.</p>
+      <div class="photos"><div>Foto de exemplo 1</div><div>Foto de exemplo 2</div><div>Foto de exemplo 3</div></div>
+    </section>
+  </main>
+  <footer>VENTURA · EM GEL <span>Agendamentos sujeitos à confirmação.</span></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

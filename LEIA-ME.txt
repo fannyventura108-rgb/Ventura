@@ -1,0 +1,12 @@
+VENTURA — EM GEL | ATUALIZAÇÃO
+
+1. Faça uma cópia de segurança da pasta atual do site.
+2. Substitua os arquivos app.js, index.html e styles.css pelos arquivos desta pasta.
+3. Abra config.js e substitua COLE_AQUI_SUA_CHAVE_PUBLICA_DO_SUPABASE pela sua chave PUBLICÁVEL atual (não use secret nem service_role).
+4. Mantenha os outros arquivos do site, incluindo manifest.webmanifest e a pasta assets.
+5. Antes de usar com clientes, confira no Supabase as políticas RLS das tabelas services e bookings.
+
+Este app consulta public.services (id, name, price, active) e tenta inserir em public.bookings usando apenas:
+customer_name, customer_phone, preferred_time, notes.
+
+A gravação só funcionará se as permissões RLS da tabela bookings permitirem INSERT anônimo de forma segura. O site sempre mantém o envio por WhatsApp como caminho adicional.
