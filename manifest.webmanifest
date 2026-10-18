@@ -1,0 +1,19 @@
+
+{
+  "id": "/Ventura/",
+  "name": "Ventura - Em Gel",
+  "short_name": "Ventura",
+  "description": "Agendamento de serviços de unhas",
+  "start_url": "/Ventura/",
+  "scope": "/Ventura/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/Ventura/assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
